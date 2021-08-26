@@ -1,0 +1,22 @@
+<button type="button" (click)="refreshData()" class="btn btn-info"
+  style="width: 100px; margin-top: 20px; margin-bottom: 5px; float: right;">רענן</button>
+<br />
+<div class="main">
+  <div class="child cat">
+    <div *ngFor="let item of items">
+      <h3>{{item.title}}</h3>
+      <h6>{{item.pubDate}}</h6>
+      <p>{{item.description}}</p>
+      <hr />
+    </div>
+  </div>
+  <div class="child">
+      <div *ngFor="let category of categories;let i=index">
+          <button (click)="onCategoryClick(category.id,i)" type="button" class="btn btn-primary"
+          style="width: 100%; margin-bottom: 5px;"
+          [style.background-color]="i===selected ? 'red' : ''">{{category.rssName}}</button>
+      </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+.main {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  grid-gap: 10px;
+  width: 100%;
+}
+.cat{
+  align-items: center;
+}
+.child {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid red;
+}
